@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    width: 350px;
+    border-top: 5px solid antiquewhite;
+    border-right: 5px solid antiquewhite;
+    border-radius: 10px;
+    flex-direction: column;
+    height: calc(90vh - 200px);
+    justify-content: space-between;
+}
+
+.title {
+    margin-left: 10px;
+    font-size: 2.5rem;
+}
+
+.projects {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    align-items: center;
+}
+
+.projects::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
