@@ -3,7 +3,7 @@ import styles from '../Footer/Footer.module.css'
 
 function Footer(){
     return(
-        <span className={styles.footer}>Creado por Paolo Billordo</span>
+        <footer className={styles.footer}>Creado por Paolo Billordo</footer>
     )
 }
 

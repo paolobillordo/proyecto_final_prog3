@@ -3,14 +3,18 @@ import NavBar from './components/NavBar/NavBar.jsx'
 import Welcome from './components/Welcome/Welcome.jsx';
 import Projects from './components/Projects/Projects.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import ProjectTasks from './components/ProjectTasks/ProjectTasks.jsx';
 
 function App() {
   return (
-    <div className={styles.container}>
+    <div>
       <NavBar />
-      <Projects />
-      <Footer />
-      
+
+      <div className={styles.container}>
+        <Projects />
+        <ProjectTasks />
+
+      </div>
     </div>
   )
 }

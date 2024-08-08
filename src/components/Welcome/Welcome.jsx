@@ -1,13 +1,9 @@
-import { Navigate, useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from '../Welcome/Welcome.module.css'
 
 
 function Welcome() {
-    const location = useLocation();
-
-    function login(){
-        return <Navigate to="/login" state={{ from: location }} />;
-    }
+    
     return (
         <div className={styles.container}>
             <div className={styles.sec_img}>

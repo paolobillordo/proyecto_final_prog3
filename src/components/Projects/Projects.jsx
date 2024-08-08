@@ -4,7 +4,7 @@ import Project from './Project.jsx';
 function Projects() {
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>Proyectos</h1>
+            <h1 className={styles.title}>Tus Proyectos</h1>
             <div className={styles.projects}>
                 <Project />
                 <Project />

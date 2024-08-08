@@ -1,0 +1,35 @@
+.container {
+    width: calc(100% - 350px);
+    height: calc(90vh - 200px);
+    display: flex;
+    flex-direction: column;
+}
+
+.project_desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.description {
+    font-size: 1.5rem;
+}
+
+.tasks_container {
+    display: flex;
+    justify-content: space-around;
+    height: 70vh;
+}
+
+.column_task {
+    width: 280px;
+    border-top: 5px solid antiquewhite;
+    border-right: 5px solid antiquewhite;
+    border-radius: 10px;
+
+}
+
