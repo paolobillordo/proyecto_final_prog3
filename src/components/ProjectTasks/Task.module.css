@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('src/assets/papelito.png');
+    background-size: cover;
+    width: 280px;
+    height: 180px;
+    
+}
+
+.task_title{
+    width: 220px;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    color: darkblue;
+    text-align: center;
+    transform: rotate(-5deg);
+    
+}

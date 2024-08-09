@@ -2,11 +2,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgb(6, 49, 89);
+    border: 5px solid antiquewhite;
     width: 300px;
     height: 60px;
     border-radius: 20px;
     margin-bottom: 15px;
+}
+
+.container:hover{
+    border-color: rgb(190, 80, 150);
 }
 
 .project_name {
@@ -14,4 +18,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 2rem;
+}
+
+.project_name:hover {
+    color: rgb(190, 80, 150);
+    cursor: pointer;
 }

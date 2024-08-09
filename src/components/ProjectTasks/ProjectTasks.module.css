@@ -3,9 +3,11 @@
     height: calc(90vh - 200px);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .project_desc {
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -22,7 +24,7 @@
 .tasks_container {
     display: flex;
     justify-content: space-around;
-    height: 70vh;
+
 }
 
 .column_task {
@@ -30,6 +32,38 @@
     border-top: 5px solid antiquewhite;
     border-right: 5px solid antiquewhite;
     border-radius: 10px;
+    overflow-y: auto;
+    height: calc(90vh - 300px);
 
 }
 
+.column_task::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.to_do {
+    color: rgb(217, 213, 90);
+}
+
+.in_curse {
+    color: rgb(92, 199, 88);
+}
+
+.finish {
+    color: rgb(154, 101, 201);
+}
+
+.btn_new_task {
+    font-family: "Rubik Marker Hatch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+.btn_new_task:hover {
+    color: rgb(92, 199, 88);
+    cursor: pointer;
+}
