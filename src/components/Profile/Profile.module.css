@@ -24,7 +24,7 @@
 .profile_container {
     width: 1000px;
     height: 700px;
-    background-image: url('src/assets/papelito.png');
+    background-image: url('https://github.com/paolobillordo/imagenes/blob/main/papelito.png?raw=true');
     background-size: cover;
     display: flex;
     flex-direction: column;

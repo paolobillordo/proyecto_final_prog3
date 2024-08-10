@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('src/assets/papelito.png');
+    background-image: url('https://github.com/paolobillordo/imagenes/blob/main/papelito.png?raw=true');
     background-size: cover;
     width: 280px;
     height: 180px;

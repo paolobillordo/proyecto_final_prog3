@@ -10,7 +10,7 @@ function Welcome() {
                 <section className={styles.section}>
                     HOLA! Esto es TASK MANAGER, el manejador de tus proyectos y tareas personales que estabas buscando y acabas de encontrar.
                 </section>
-                <img className={styles.img_tasks} src="src\assets\papelito2.png" alt="img tasks" />
+                <img className={styles.img_tasks} src="https://github.com/paolobillordo/imagenes/blob/main/papelito2.png?raw=true" alt="img tasks" />
             </div>
             <Link to='/login' className={styles.btn_login}>Login</Link>
 
