@@ -1,0 +1,93 @@
+.container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.editar {
+    color: antiquewhite;
+    font-size: 3rem;
+}
+
+.label {
+    font-size: 2.5rem;
+}
+
+.input {
+    width: 600px;
+    height: 55px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 40px;
+    color: rgb(92, 199, 88);
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: "Rubik Marker Hatch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+::placeholder {
+    color: rgb(46, 98, 147);
+}
+
+.file_input {
+    font-size: 1.5rem;
+    margin-left: 50px;
+    color: black;
+}
+
+.textarea {
+    width: 600px;
+    height: 100px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 40px;
+    color: rgb(92, 199, 88);
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: "Rubik Marker Hatch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.button {
+    margin-top: 30px;
+    width: 250px;
+    height: 80px;
+    border-radius: 40px;
+    font-family: "Rubik Marker Hatch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: rgb(92, 199, 88);
+    background-color: rgba(46, 98, 147, 0.3);
+}
+
+.formGroup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#file_container{
+    margin-top: 20px;
+}
+
+#button{
+    justify-content: center;
+}

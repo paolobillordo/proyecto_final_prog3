@@ -22,16 +22,46 @@
 }
 
 .profile_container {
-    width: 859px;
-    height: 600px;
+    width: 1000px;
+    height: 700px;
     background-image: url('src/assets/papelito.png');
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.back:hover a{
+.back:hover a {
     color: rgb(154, 101, 201);
 }
 
-.logout:hover a{
+.logout:hover a {
     color: rgb(167, 54, 54);
+}
+
+.edit:hover a {
+    color: rgb(46, 98, 147);
+}
+
+.name {
+    color: blueviolet;
+    font-size: 2rem;
+    transform: rotate(-5deg);
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.img {
+    width: 200px;
+    height: 300px;
+    background-color: aqua;
+    background-size: cover;
+    transform: rotate(-5deg);
+    margin-right: 20px;
+    margin-top: 70px;
 }

@@ -8,6 +8,8 @@ import { Route, Routes } from 'react-router-dom';
 import ProjectsContainer from './components/ProjectsContainer/ProjectsContainer.jsx';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute.jsx';
 import Profile from './components/Profile/Profile.jsx';
+import EditProfile from './components/Profile/EditProfile.jsx';
+
 
 function App() {
   return (
@@ -20,9 +22,9 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/projects' element={<ProtectedRoute><ProjectsContainer /></ProtectedRoute>} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/profile/edit' element={<EditProfile />} />
 
           </Routes>
-
         </div>
       </div>
 
