@@ -57,9 +57,7 @@ function Profile() {
                             <h2 className={styles.name}>email: {data.email}</h2>
                             <h2 className={styles.name}>username: {data.username}</h2>
                             <h2 className={styles.name}>bio: {data.bio}</h2>
-
                         </div>
-
                     </div>
                     : null
                 }
