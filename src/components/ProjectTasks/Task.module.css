@@ -1,8 +1,10 @@
+@import url('/assets/papelito.png');
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('src/assets/papelito.png');
+    background-image: url('/assets/papelito.png');
     background-size: cover;
     width: 280px;
     height: 180px;
