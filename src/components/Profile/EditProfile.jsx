@@ -13,7 +13,6 @@ function EditProfile() {
         username: '',
         bio: '',
         email: '',
-        image: null,
     });
 
     const handleChange = (e) => {
@@ -22,14 +21,7 @@ function EditProfile() {
             ...formData,
             [name]: value,
         });
-    };
-
-    const handleImageChange = (e) => {
-        setFormData({
-            ...formData,
-            image: e.target.files[0],
-        });
-    };
+    };   
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -39,11 +31,15 @@ function EditProfile() {
                 filledFormData[key] = formData[key];
             }
         }
+        cambiar(filledFormData);
+    };
 
+    function cambiar(filledFormData){
         fetch(`${import.meta.env.VITE_API_BASE_URL}users/profiles/${data.user__id}/`, {
             method: "PATCH",
-            body: filledFormData,
+            body: JSON.stringify(filledFormData),
             headers: {
+                "Content-Type": "application/json",
                 Authorization: `Token ${token}`,
             },
 
@@ -58,10 +54,7 @@ function EditProfile() {
             .catch((error) => {
                 console.error("Error intentar modificar el perfil", error);
             })
-
-        console.log(data.user__id)
-
-    };
+    }
 
 
     useEffect(() => {
@@ -151,17 +144,6 @@ function EditProfile() {
                             rows="4"
                             placeholder={data.bio}
                             className={styles.textarea}
-                        />
-                    </div>
-                    <div className={styles.formGroup} id={styles.file_container}>
-                        <label className={styles.label} htmlFor="image">imagen de Perfil:</label>
-                        <input
-                            type="file"
-                            id="image"
-                            name="image"
-                            accept="image/*"
-                            onChange={handleImageChange}
-                            className={styles.file_input}
                         />
                     </div>
                     <div className={styles.formGroup} id={styles.button}>

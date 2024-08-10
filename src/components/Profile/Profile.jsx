@@ -51,7 +51,6 @@ function Profile() {
             <div className={styles.profile_container}>
                 {data ?
                     <div className={styles.info}>
-                        <img className={styles.img} src={data.image} alt="" />
                         <div>
                             <h2 className={styles.name}>Nombre: {data.first_name}</h2>
                             <h2 className={styles.name}>Apellido: {data.last_name}</h2>
@@ -62,10 +61,6 @@ function Profile() {
                         </div>
 
                     </div>
-
-
-
-
                     : null
                 }
             </div>

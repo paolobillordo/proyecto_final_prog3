@@ -28,6 +28,7 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -50,18 +51,10 @@
 }
 
 .info {
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.img {
-    width: 200px;
-    height: 300px;
-    background-color: aqua;
-    background-size: cover;
-    transform: rotate(-5deg);
-    margin-right: 20px;
-    margin-top: 70px;
-}
