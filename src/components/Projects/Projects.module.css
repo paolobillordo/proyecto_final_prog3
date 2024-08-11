@@ -41,9 +41,19 @@
     background-color: transparent;
     border: none;
     font-size: 2rem;
+    text-decoration: none;
 }
 
 .btn_create:hover {
     color: rgb(46, 98, 147);
     cursor: pointer;
+}
+
+.modal_container {
+    position: fixed;
+    background-image: url('https://github.com/paolobillordo/imagenes/blob/main/green-board.jpg?raw=true');
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 348px;
+    height: calc(90vh - 400px);
 }

@@ -9,7 +9,7 @@
     margin-bottom: 15px;
 }
 
-.container:hover{
+.container:hover {
     border-color: rgb(190, 80, 150);
 }
 
@@ -23,4 +23,9 @@
 .project_name:hover {
     color: rgb(190, 80, 150);
     cursor: pointer;
+}
+
+.selected {
+    color: rgb(190, 80, 150);
+    border-color: rgb(190, 80, 150);
 }

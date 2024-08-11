@@ -13,13 +13,14 @@
     justify-content: space-around;
 }
 
-.title {
-    font-size: 3rem;
-}
-
 .description {
-    font-size: 1.5rem;
-}
+    width: 500px;
+    height: 80px;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 2rem;
+    color: rgb(77, 152, 223);}
 
 .tasks_container {
     display: flex;
@@ -61,9 +62,25 @@
     background-color: transparent;
     border: none;
     font-size: 2rem;
+    width: 100px;
 }
 
 .btn_new_task:hover {
     color: rgb(92, 199, 88);
+    cursor: pointer;
+}
+
+.btn_delete_project {
+    font-family: "Rubik Marker Hatch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    width: 150px;
+}
+
+.btn_delete_project:hover {
+    color: rgb(167, 54, 54);
     cursor: pointer;
 }

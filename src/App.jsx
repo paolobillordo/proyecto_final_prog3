@@ -9,24 +9,30 @@ import ProjectsContainer from './components/ProjectsContainer/ProjectsContainer.
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute.jsx';
 import Profile from './components/Profile/Profile.jsx';
 import EditProfile from './components/Profile/EditProfile.jsx';
+import { ProjectProvider } from './components/Contexts/ProjectContext.jsx';
+import NewProject from './components/Projects/NewProject.jsx';
 
 
 function App() {
   return (
     <AuthProvider>
-      <div>
+      <ProjectProvider>
+        <div>
 
-        <div className={styles.container}>
-          <Routes>
-            <Route path='/' element={<Welcome />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/projects' element={<ProtectedRoute><ProjectsContainer /></ProtectedRoute>} />
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/profile/edit' element={<EditProfile />} />
+          <div className={styles.container}>
+            <Routes>
+              <Route path='/' element={<Welcome />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/projects' element={<ProtectedRoute><ProjectsContainer /></ProtectedRoute>} />
+              <Route path='/profile' element={<Profile />} />
+              <Route path='/profile/edit' element={<EditProfile />} />
+              <Route path='/new/project' element={<NewProject />} />
 
-          </Routes>
+            </Routes>
+          </div>
         </div>
-      </div>
+
+      </ProjectProvider>
 
     </AuthProvider>
   )
