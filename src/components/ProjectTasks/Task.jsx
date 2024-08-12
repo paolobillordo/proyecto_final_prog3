@@ -1,10 +1,21 @@
+import { useContext } from 'react';
 import styles from '../ProjectTasks/Task.module.css'
+import { ProjectContext } from '../Contexts/ProjectContext';
+import { useNavigate } from 'react-router-dom';
 
-function Task() {
+function Task(t) {
+    const { selTask } = useContext(ProjectContext);
+    const navigate = useNavigate()
+    
+    const selectTask = () => {
+        selTask(t);
+        navigate("/task")
+    }
+
+
     return (
-        <div className={styles.container}>
-            <h3 className={styles.task_title}>Terminar el proyecto, no se que mas poner de titulo, pero lo rellenop con cualquier texto.</h3>
-
+        <div className={styles.container} onClick={selectTask}>
+            <h3 className={styles.task_title}>{t.title}</h3>
         </div>
     )
 }

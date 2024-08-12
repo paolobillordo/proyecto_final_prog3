@@ -7,14 +7,13 @@ import { ProjectContext } from "../Contexts/ProjectContext";
 import { useAuth } from "../Contexts/AuthContext";
 
 function ProjectsContainer() {
-    const [data, setData] = useState(null);
     const { token } = useAuth("state");
-    const { projects, tasks, userId, setId, setNewProjects, setNewTasks, removeProject, removeTask, addProject, addTask } = useContext(ProjectContext);
+    const { setId, removeProject, addProject, setName, } = useContext(ProjectContext);
 
     let page = 1;
 
     function getProjects(page){
-        fetch(`${import.meta.env.VITE_API_BASE_URL}/taskmanager/projects/?page_size=100&page=${page}`, {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}taskmanager/projects/?page_size=100&page=${page}`, {
             method: "GET",
             headers: {
                 Authorization: `Token ${token}`,
@@ -55,6 +54,7 @@ function ProjectsContainer() {
                 })
                 .then((responseData) => {
                     setId(responseData.user__id);
+                    setName(responseData.first_name)
                 })
                 .catch((error) => {
                     console.error("Error error al iniciar sesión", error);

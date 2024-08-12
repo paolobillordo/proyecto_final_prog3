@@ -1,23 +1,29 @@
-import { useState } from "react";
-import styles from "../Projects/NewProject.module.css"
-import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { useAuth } from "../Contexts/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import styles from "../ProjectTasks/NewTask.module.css"
+import { ProjectContext } from "../Contexts/ProjectContext";
 
 
-function NewProject() {
+function NewTask() {
+    const { project, addTask, states } = useContext(ProjectContext);
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const { token } = useAuth("state")
     const navigate = useNavigate();
 
+    const porHacer = states.find(estado => estado.name === "To Do");
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch(`${import.meta.env.VITE_API_BASE_URL}taskmanager/projects/`, {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}taskmanager/tasks/`, {
             method: "POST",
             body: JSON.stringify({
-                name: name,
+                title: name,
                 description: description,
+                project: project.id,
+                status: porHacer.id,
             }),
             headers: {
                 "Content-Type": "application/json",
@@ -26,13 +32,16 @@ function NewProject() {
         })
             .then((response) => {
                 if (!response.ok) {
-                    throw new Error("No se pudo modificar el perfil");
+                    throw new Error("No se pudo crear la tarea");
                 }
-                navigate("/projects")
-                return;
+                return response.json();
+            })
+            .then((data) => {
+                addTask([data])
+                navigate("/projects")                
             })
             .catch((error) => {
-                console.error("Error intentar modificar el perfil", error);
+                console.error("Error al intentar crear la tarea", error);
             })
 
 
@@ -46,7 +55,7 @@ function NewProject() {
 
             <form onSubmit={handleSubmit}>
                 <div className={styles.field}>
-                    <label className={styles.field_names} htmlFor="name">Nombre</label>
+                    <label className={styles.field_names} htmlFor="name">Titulo</label>
                     <input
                         className={styles.input}
                         type="text"
@@ -72,8 +81,7 @@ function NewProject() {
             </form>
 
         </div>
-    );
+    )
 }
 
-
-export default NewProject;
+export default NewTask;

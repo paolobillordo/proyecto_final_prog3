@@ -9,6 +9,10 @@
     
 }
 
+.container:hover{
+    cursor: pointer;
+}
+
 .task_title{
     width: 220px;
     margin-right: 10px;

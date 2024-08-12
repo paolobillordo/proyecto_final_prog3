@@ -11,6 +11,8 @@ import Profile from './components/Profile/Profile.jsx';
 import EditProfile from './components/Profile/EditProfile.jsx';
 import { ProjectProvider } from './components/Contexts/ProjectContext.jsx';
 import NewProject from './components/Projects/NewProject.jsx';
+import ViewTask from './components/ProjectTasks/ViewTask.jsx';
+import NewTask from './components/ProjectTasks/NewTask.jsx';
 
 
 function App() {
@@ -24,12 +26,14 @@ function App() {
               <Route path='/' element={<Welcome />} />
               <Route path='/login' element={<Login />} />
               <Route path='/projects' element={<ProtectedRoute><ProjectsContainer /></ProtectedRoute>} />
-              <Route path='/profile' element={<Profile />} />
-              <Route path='/profile/edit' element={<EditProfile />} />
-              <Route path='/new/project' element={<NewProject />} />
-
+              <Route path='/profile' element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+              <Route path='/profile/edit' element={<ProtectedRoute><EditProfile /></ProtectedRoute>} />
+              <Route path='/new/project' element={<ProtectedRoute><NewProject /></ProtectedRoute>} />
+              <Route path='/task' element={<ProtectedRoute><ViewTask /></ProtectedRoute>} />
+              <Route path='/new/task' element={<ProtectedRoute><NewTask /></ProtectedRoute>} />
             </Routes>
           </div>
+          <Footer/>
         </div>
 
       </ProjectProvider>

@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import styles from '../Projects/Projects.module.css'
 import Project from './Project.jsx';
 import { useAuth } from '../Contexts/AuthContext.jsx';
@@ -6,9 +6,7 @@ import { ProjectContext } from '../Contexts/ProjectContext.jsx';
 import { Link } from 'react-router-dom';
 
 function Projects() {
-    const [data, setData] = useState(null);
-    const { token } = useAuth("state");
-    const { projects, tasks, userId, setId, setNewProjects, setNewTasks, removeProject, removeTask, addProject, addTask } = useContext(ProjectContext);
+    const { projects, userId } = useContext(ProjectContext);
 
     let myProjects = (projects? projects.filter(project => project.owner === userId): null)
     
