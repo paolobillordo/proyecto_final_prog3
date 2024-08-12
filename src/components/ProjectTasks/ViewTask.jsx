@@ -98,8 +98,8 @@ function ViewTask() {
                         <div>
                             <h2 className={styles.name}>Tiulo: {task.title} </h2>
                             <h2 className={styles.name}>Descripción: {task.description} </h2>
-                            <h2 className={styles.name}>Estado: Por hacer</h2>
                         </div>
+                            <h2 className={styles.name}>Elige el Estado de la tarea:</h2>
                         <div className={styles.states}>
                             <div className={styles.to_do}>
                                 <Link onClick={() => changeStatus("To Do")}>Por Hacer</Link>
